@@ -1,0 +1,13 @@
+class Solution {
+    public int findComplement(int num) {
+         String binarystring=Integer.toBinaryString(num);
+        StringBuilder str=new StringBuilder();
+        for(int i=0;i<binarystring.length();i++)
+        {
+            int temp=binarystring.charAt(i)-'0';
+            temp=temp^1;
+            str.append(temp);
+        }
+        return Integer.parseInt(str.toString(),2);
+    }
+}
